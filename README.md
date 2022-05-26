@@ -28,3 +28,8 @@ https://github.com/efendilin/My-Checker/raw/main/my-checker.zip
 
 ![](https://raw.githubusercontent.com/efendilin/My-Checker/main/Screenshot4.png)
 看到這個就可以開始使用
+
+
+![](https://raw.githubusercontent.com/efendilin/My-Checker/main/Screenshot5.jpg)
+標記會像這個樣子
+詳細的標記顏色意義請參閱 https://www.covid19-druginteractions.org/
