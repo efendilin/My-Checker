@@ -1,0 +1,27 @@
+{
+    "name": "My Drug Marker",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "A simple chrome extension for checking drug & drug interaction for the https://medcloud.nhi.gov.tw/ website",
+    "icons": { "128": "128.png", "64": "64.png" },
+    "permissions": ["storage"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {   
+        "service_worker": "background.js"
+    },  
+    "content_scripts" : [
+    {
+      "matches": [ "https://medcloud.nhi.gov.tw/*", "https://medvpn.nhi.gov.tw/*"],
+      "js": ["/content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+ ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'",
+      "sandbox": "sandbox allow-scripts; script-src 'self'; object-src 'self'"
+    }
+}
+
