@@ -4,41 +4,55 @@
 
 window.addEventListener ("load", afterLoad, false);
 
-function make_mark(target_td, drug_data) {
+function make_mark(target_td, drug_data, result_list) {
   if (drug_data[0]) {
     target_td.style.backgroundColor = drug_data[0];
-  }
-
-
-  if (drug_data[1]) {
-    let tag = document.createElement("a");
-    if (drug_data[1] === "?") {
-      tag.href = "https://webfiles.pfizer.com/taiwan_paxlovid_hcp";
-    }else{
-      tag.href = "https://www.covid19-druginteractions.org/"
+    if (result_list.hasOwnProperty(drug_data[0])) {
+      result_list[drug_data[0]] += 1;
     }
-    tag.target = "_blank"
-    tag.innerText = drug_data[1];
-    tag.style.fontSize = "x-large";
-    target_td.appendChild(tag);
   }
+  let tag = document.createElement("a");
+  if (drug_data[1] === "?") {
+    tag.href = "https://webfiles.pfizer.com/taiwan_paxlovid_hcp";
+  }else{
+    tag.href = "https://www.covid19-druginteractions.org/"
+  }
+  tag.target = "_blank"
+  tag.innerText = drug_data[1] + "🔗";
+  tag.style.fontSize = "x-large";
+  target_td.appendChild(tag);
+  return result_list;
 }
 
 
 function marking (table_rows, drug_list, drug_data) {
   //console.log("here")
+  let result_list = {red:0, orange:0, yellow:0}
   for (var i = 1; i < table_rows.length; i++) {
-    //let founded = false;
-    let keys = table_rows[i].querySelectorAll("td")[3].innerText.split(" ");
-    for (var j = 0; j < keys.length; j++) {
-      let key_result = drug_list.indexOf(keys[j].toLowerCase())
-      //console.log(key_result)
-      if (key_result !== -1) {
-        console.log(key_result)
-        make_mark(table_rows[i].querySelectorAll("td")[3], drug_data[key_result])
-        break;
+    let moderate_severe = false;
+    for (var j = 0; j < drug_list.length; j++) {
+      let durg_name = table_rows[i].querySelectorAll("td")[3].innerText.toLowerCase();
+      let drug_result = durg_name.includes(drug_list[j])
+      if (drug_result) {
+        //console.log("find:" + j)
+        if (drug_data[j][0] === 'red') {
+          result_list = make_mark(table_rows[i].querySelectorAll("td")[3], drug_data[j], result_list)
+          break;
+        }else if (drug_data[j][0] === 'orange'){
+          moderate_severe = true;
+          result_list = make_mark(table_rows[i].querySelectorAll("td")[3], drug_data[j], result_list)
+        }else if(!moderate_severe){
+          result_list = make_mark(table_rows[i].querySelectorAll("td")[3], drug_data[j], result_list)
+        }
       }
     }
+  }
+  if (result_list.red||result_list.orange||result_list.yellow) {
+    chrome.runtime.sendMessage({
+      type:'ask_notification',
+      origin:'content',
+      data:result_list
+    });
   }
 }
 

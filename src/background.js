@@ -12,26 +12,33 @@ const interation_drug_list = ['codeine', 'piroxicam', 'propoxyphene', 'pethidine
  'ergotamine', 'methylergonovine', 'elbasvir', 'grazoprevir', 'glecaprevir', 'pibrentasvir', 'ombitasvir', 'paritaprevir', 'dasabuvir', 'sofosbuvir', 'velpatasvir',
  'voxilaprevir', 'lovastatin', 'simvastatin', 'ergometrine', 'atorvastatin', 'rosuvastatin', 'ethinyl estradiol', 'cyclosporine', 'tacrolimus', 'sirolimus', 'salmeterol',
  'fentanyl', 'methadone', 'sildenafil', 'triazolam', 'midazolam', 'budesonide', 'aprepitant', 'domperidone', 'loperamide', 'triamcinolone', 'morphine', 'oxycodone',
- 'tramadol', 'aminophylline', 'diclofenac'];
+ 'tramadol', 'aminophylline'];
 
-const interation_drug_values = [['yellow', '⬤', ''], ['yellow', '⬤', ''], ['red', '?', ''], ['red', '?', ''], ['red', '?', ''], ['red', '?', ''], ['red', '⚠', ''],
-['red', '?', ''], ['red', '?', ''], ['red', '?', ''], ['red', '?', ''], ['yellow', '?', ''], ['orange', '▢', ''], ['red', '?', ''], ['yellow', '?', ''],
-['yellow', '?', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], 
-['yellow', '?', ''], ['yellow', '?', ''], ['orange', '▢', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], 
-['orange', '▢', ''], ['red', '⬤', ''], ['red', '❌', ''], ['red', '⬤', ''], ['orange', '▢', ''], ['red', '❌', ''], ['red', '❌', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], 
-['yellow', '⬤', ''], ['yellow', '⬤', ''], ['orange', '⬤', ''], ['yellow', '⬤', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['orange', '▢', ''], ['orange', '⬤', ''], 
-['orange', '▢', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], ['orange', '⬤', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['yellow', '⬤', ''], 
-['yellow', '?', ''], ['yellow', '?', ''], ['orange', '⬤', ''], ['red', '?', ''], ['yellow', '?', ''], ['orange', '⬤', ''], ['orange', '⬤', ''], ['yellow', '?', ''], 
-['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], ['orange', '⬤', ''], 
-['yellow', '⬤', ''], ['orange', '⬤', ''], ['yellow', '⬤', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['red', '?', ''], ['orange', '▢', ''], ['orange', '▢', ''], 
-['red', '❌', ''], ['red', '❌', ''], ['red', '⬤', ''], ['red', '⬤', ''], ['orange', '⬤', ''], ['orange', '⬤', ''], ['red', '?', ''], ['red', '?', ''], ['red', '⬤', ''], 
-['orange', '▢', ''], ['orange', '▢', ''], ['red', '', ''], ['yellow', '?', ''], ['orange', '', ''], ['orange', '⬤', ''], ['yellow', '?', ''], ['yellow', '?', ''], 
-['yellow', '?', ''], ['orange', '⬤', ''], ['orange', '▢', ''], ['yellow', '⬤', ''], ['yellow', '⬤', ''], ['red', '⬤', ''], ['red', '⬤', ''], ['yellow', '?', ''], ['red', '?', ''], 
-['red', '?', ''], ['red', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['red', '⬤', ''], ['red', '⬤', ''], ['red', '⬤', ''], ['red', '⬤', ''], ['yellow', '?', ''], 
-['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['red', '⬤', ''], ['red', '⬤', ''], ['red', '⬤', ''], ['orange', '▢', ''], ['yellow', '?', ''], 
-['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['red', '⬤', ''], ['orange', '▢', ''], ['yellow', '?', ''], ['red', '?', ''], 
-['red', '?', ''], ['red', '⬤', ''], ['yellow', '⬤', ''], ['orange', '▢', ''], ['reg', '⬤', ''], ['orange', '⬤', ''], ['orange', '▢', ''], ['orange', '⬤', ''], 
-['orange', '▢', ''], ['orange', '⬤', ''], ['yellow', '⬤', ''],  ['lime', '⬤', '']];
+const interation_drug_values = [['yellow', '', ''], ['yellow', '', ''], ['red', '?', ''], ['red', '?', ''], 
+['red', '?', ''], ['red', '?', ''], ['red', '⚠', ''], ['red', '?', ''], ['red', '?', ''], ['red', '?', ''], 
+['red', '?', ''], ['yellow', '?', ''], ['orange', '▢', ''], ['red', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], 
+['orange', '▢', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['yellow', '?', ''], ['yellow', '?', ''], 
+['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['orange', '▢', ''], ['yellow', '', ''], ['yellow', '', ''], 
+['yellow', '', ''], ['yellow', '', ''], ['yellow', '', ''], ['orange', '▢', ''], ['red', '', ''], ['red', '❌', ''], 
+['red', '', ''], ['orange', '▢', ''], ['red', '❌', ''], ['red', '❌', ''], ['yellow', '', ''], ['yellow', '', ''], 
+['yellow', '', ''], ['yellow', '', ''], ['orange', '', ''], ['yellow', '', ''], ['yellow', '?', ''], ['yellow', '?', ''], 
+['orange', '▢', ''], ['orange', '', ''], ['orange', '▢', ''], ['yellow', '', ''], ['yellow', '', ''], ['orange', '', ''], 
+['orange', '▢', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['yellow', '', ''], ['yellow', '?', ''], 
+['yellow', '?', ''], ['orange', '', ''], ['red', '?', ''], ['yellow', '?', ''], ['orange', '', ''], ['orange', '', ''], 
+['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '', ''], 
+['yellow', '', ''], ['yellow', '', ''], ['orange', '', ''], ['yellow', '', ''], ['orange', '', ''], ['yellow', '', ''], 
+['orange', '▢', ''], ['orange', '▢', ''], ['red', '?', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['red', '❌', ''], 
+['red', '❌', ''], ['red', '', ''], ['red', '', ''], ['orange', '', ''], ['orange', '', ''], ['red', '?', ''], 
+['red', '?', ''], ['red', '', ''], ['orange', '▢', ''], ['orange', '▢', ''], ['red', '', ''], ['yellow', '?', ''], 
+['orange', '', ''], ['orange', '', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['orange', '', ''], 
+['orange', '▢', ''], ['yellow', '', ''], ['yellow', '', ''], ['red', '', ''], ['red', '', ''], ['yellow', '?', ''], 
+['red', '?', ''], ['red', '?', ''], ['red', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['red', '', ''], 
+['red', '', ''], ['red', '', ''], ['red', '', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], 
+['yellow', '?', ''], ['red', '', ''], ['red', '', ''], ['red', '', ''], ['orange', '▢', ''], ['yellow', '?', ''], 
+['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['red', '', ''], ['orange', '▢', ''], 
+['yellow', '?', ''], ['red', '?', ''], ['red', '?', ''], ['red', '', ''], ['yellow', '', ''], ['orange', '▢', ''], 
+['red', '', ''], ['orange', '', ''], ['orange', '▢', ''], ['orange', '', ''], ['orange', '▢', ''], ['orange', '', ''], 
+['yellow', '', '']];
 
 
 initDataAndListener();
@@ -57,6 +64,29 @@ chrome.runtime.onInstalled.addListener(function() {
     }
   });
 });
+
+function notification(notification_message) {
+  let notificationId = "mydrugmarkid_01"
+  let currentTimeAsMilliseconds = new Date().getTime();
+  let oneMinuteAsMilliseconds = 1 * 60 * 1000;
+  var notificationOptions = {
+    type: "basic",
+    iconUrl: "64.png",
+    title: "發現藥物交互作用(PAXLOVID)",
+    message: notification_message,
+    eventTime: currentTimeAsMilliseconds + oneMinuteAsMilliseconds,
+    /*imageUrl : "icon.png",*/
+    /*progress : 0,*/
+    isClickable: true
+  };
+  chrome.notifications.clear(notificationId, function(wasclear){
+    chrome.notifications.create(notificationId, notificationOptions, function(id) {
+      console.log("create: " + id);
+    });
+  });
+}
+
+//notification("My Drug Checker is here");
 
 function initDataAndListener() {
 
@@ -114,6 +144,9 @@ function initDataAndListener() {
             console.log(result);
           });
           break;
+        case 'ask_notification':
+          console.log("sending notification");
+          notification("紅色: " + request.data.red + "澄色: " + request.data.orange + "黃色: " + request.data.yellow);
         default:
           console.log("wrong request");
           break;
