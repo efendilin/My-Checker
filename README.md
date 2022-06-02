@@ -33,3 +33,10 @@ https://github.com/efendilin/My-Checker/raw/main/my-checker.zip
 ![](https://raw.githubusercontent.com/efendilin/My-Checker/main/Screenshot5.jpg)
 標記會像這個樣子
 詳細的標記顏色意義請參閱 https://www.covid19-druginteractions.org/
+
+Changes:
+Version 1.1 (2022/06/02):
+1. 修正資料庫的一些錯誤。
+2. 修改一些符號，加入參考資料連結。
+3. 改善複方藥物的比對方式。
+4. 新增發現交互作用的通知功能。
