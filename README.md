@@ -6,11 +6,14 @@ A chrome extension for checking drug &amp; drug interaction of PAXLOVID.
 1. https://medcloud.nhi.gov.tw/*
 2. https://medvpn.nhi.gov.tw/*
 
+目前已經在chrome商店上架
+https://reurl.cc/n1yzeX
+
 參考資料:
 1. https://webfiles.pfizer.com/taiwan_paxlovid_hcp
 2. https://www.covid19-druginteractions.org/
 
-目前已經在chrome商店申請上架，有需要的人或是電腦無法google的可以下載壓縮檔
+有需要的人或是電腦無法google的可以下載壓縮檔
 
 https://github.com/efendilin/My-Checker/raw/main/my-checker.zip
 
