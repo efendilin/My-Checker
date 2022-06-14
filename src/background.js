@@ -12,7 +12,7 @@ const interation_drug_list = ['codeine', 'piroxicam', 'propoxyphene', 'pethidine
  'ergotamine', 'methylergonovine', 'elbasvir', 'grazoprevir', 'glecaprevir', 'pibrentasvir', 'ombitasvir', 'paritaprevir', 'dasabuvir', 'sofosbuvir', 'velpatasvir',
  'voxilaprevir', 'lovastatin', 'simvastatin', 'ergometrine', 'atorvastatin', 'rosuvastatin', 'ethinyl estradiol', 'cyclosporine', 'tacrolimus', 'sirolimus', 'salmeterol',
  'fentanyl', 'methadone', 'sildenafil', 'triazolam', 'midazolam', 'budesonide', 'aprepitant', 'domperidone', 'loperamide', 'triamcinolone', 'morphine', 'oxycodone',
- 'tramadol', 'aminophylline'];
+ 'tramadol', 'aminophylline', 'fludiazepam'];
 
 const interation_drug_values = [['yellow', '', ''], ['yellow', '', ''], ['red', '?', ''], ['red', '?', ''], 
 ['red', '?', ''], ['red', '?', ''], ['red', '⚠', ''], ['red', '?', ''], ['red', '?', ''], ['red', '?', ''], 
@@ -38,7 +38,7 @@ const interation_drug_values = [['yellow', '', ''], ['yellow', '', ''], ['red', 
 ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['yellow', '?', ''], ['red', '', ''], ['orange', '▢', ''], 
 ['yellow', '?', ''], ['red', '?', ''], ['red', '?', ''], ['red', '', ''], ['yellow', '', ''], ['orange', '▢', ''], 
 ['red', '', ''], ['orange', '', ''], ['orange', '▢', ''], ['orange', '', ''], ['orange', '▢', ''], ['orange', '', ''], 
-['yellow', '', '']];
+['yellow', '', ''], ['orange', '?', '']];
 
 
 initDataAndListener();
